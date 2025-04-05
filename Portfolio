@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Mayank Bag - Portfolio</title>
+<style>
+body {
+    background-color: #121212;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+.maindiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #6a0dad;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.Contact {
+    color: white;
+    margin-left: 20px;
+}
+
+.top-nav {
+    margin-right: 20px;
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-nav ul li {
+    margin-left: 20px;
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+    color: #e0aaff;
+}
+
+/* Introduction Section */
+.intro-section {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    border: 5px solid #6a0dad;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    margin-right: 50px;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.intro-content {
+    flex: 1;
+}
+
+.intro-heading {
+    color: #e0aaff;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.intro-heading::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #6a0dad;
+}
+
+.intro-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-top: 25px;
+}
+
+.highlight {
+    color: #e0aaff;
+    font-weight: 500;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    color: #e0aaff;
+    margin-left: 50px;
+    font-weight: bold;
+    clear: both;
+    font-size: 32px;
+}
+
+.skill-container {
+    max-width: 900px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.skill-item {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(106, 13, 173, 0.4);
+}
+
+.skill-item img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 15px;
+}
+
+.skill-item .skill-name {
+    font-weight: 600;
+    color: #e0aaff;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.skill-item .experience {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.project-container {
+    max-width: 800px;
+    margin-left: 50px;
+    padding: 20px;
+}
+
+.project-item {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 5px solid #6a0dad;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item h2 {
+    color: #e0aaff;
+    margin-top: 0;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.project-item p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-item .tech-stack {
+    margin-top: 15px;
+    color: #aaaaaa;
+    font-style: italic;
+}
+
+.project-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e0aaff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-item a:hover {
+    color: #c77dff;
+    text-decoration: underline;
+}
+
+.education-container {
+    max-width: 800px;
+    margin-left: 50px;
+    padding: 20px;
+}
+
+.education-item {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 5px solid #6a0dad;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+}
+
+.education-item h3 {
+    color: #e0aaff;
+    margin-top: 0;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.education-item .period {
+    color: #c77dff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.education-item .courses {
+    margin-top: 15px;
+    color: #aaaaaa;
+}
+
+.education-item strong {
+    color: #e0aaff;
+}
+</style>
+</head>
+<body>
+    <div class="maindiv">
+        <div class="Contact">
+            <p style="font-size:24px; margin-bottom:-2px;">Mayank Bag</p>
+            <span>bagmayank21@gmail.com</span><br>
+            <span>91+ 8455842590</span><br>
+        </div>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="#home">About Me</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Education">Education</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div id="home" class="intro-section">
+        <div class="profile-image" style="width: 300px; height: 300px; display: flex; justify-content: center; align-items: center; color: #e0aaff; font-size: 18px;">
+            Profile Photo
+        </div>
+        <div class="intro-content">
+            <h1 class="intro-heading">Hi! I'm Mayank Bag! &#128075;</h1>
+            <p class="intro-text">
+                A passionate <span class="highlight">Computer Science and System Engineering</span> student at <span class="highlight">Kalinga Institute of Industrial Technology</span> (2022-2026). I specialize in building responsive and user-friendly web applications using <span class="highlight">Python, Java, JavaScript, HTML, CSS, and Node.js</span>, complemented by database knowledge in <span class="highlight">MySQL</span>. Currently seeking opportunities to apply my technical skills in challenging projects.
+            </p>
+        </div>
+    </div>
+    
+    <h1 class="section-title" id="Skills">Skills</h1>
+    <div class="skill-container">
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+            <div class="skill-name">HTML</div>
+            <div class="experience">1 year experience</div>
+        </div>
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+            <div class="skill-name">CSS</div>
+            <div class="experience">1 year experience</div>
+        </div>
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            <div class="skill-name">JavaScript</div>
+            <div class="experience">1 year experience</div>
+        </div>
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+            <div class="skill-name">C</div>
+            <div class="experience">3 years experience</div>
+        </div>
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+            <div class="skill-name">MySQL</div>
+            <div class="experience">1 year experience</div>
+        </div>
+        <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+            <div class="skill-name">Node.js</div>
+            <div class="experience">1 year experience</div>
+        </div>
+    </div>
+    
+    <h1 class="section-title" id="Projects">Projects</h1>
+    <div class="project-container">
+        <div class="project-item">
+            <h2>Logistics Shipping Rates Calculator</h2>
+            <p>Created a shipping cost calculator to compute rates based on weight and rate per kilogram. The application features a clean user interface with input validation and responsive design.</p>
+            <div class="tech-stack">Technologies: HTML, CSS, JavaScript</div>
+            <a href="https://github.com/BaghCodes/LogisticsShippingRates/tree/main" target="_blank">View Project on GitHub</a>
+        </div>
+    </div>
+    
+    <h1 class="section-title" id="Education">Education</h1>
+    <div class="education-container">
+        <div class="education-item">
+            <h3>Kalinga Institute of Industrial Technology</h3>
+            <span class="period">September 2022 - July 2026, Bhubaneshwar</span>
+            <p>B.Tech in Computer Science and System Engineering (CSSE)</p>
+            <div class="courses">
+                <strong>Completed Coursework:</strong> Programming in C, Data Structures and Algorithm, Object Oriented Programming with Java, Computer Organisation and Architecture, Database Management System, Operating Systems, Machine Learning, Artificial Intelligence, Software Engineering, Computer Networks
+            </div>
+            <div class="courses">
+                <strong>Current Coursework:</strong> Data Management and Warehousing, Compiler Design, Advanced Microprocessors
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <h3>Delhi Public School, Rourkela</h3>
+            <span class="period">March 2019 - March 2021, Rourkela</span>
+            <p>Higher Secondary</p>
+            <div class="courses">
+                <strong>Completed Coursework:</strong> Physics, Chemistry, Maths, Biology
+            </div>
+        </div>
+    </div>
+</body>
+</html>
